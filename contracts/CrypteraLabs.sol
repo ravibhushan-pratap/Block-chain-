@@ -12,9 +12,8 @@ pragma solidity ^0.8.20;
 //
 contract CryptaraLabs {
 
-    // =====================================================
     // -------------------- TOKEN LOGIC ---------------------
-    // =====================================================
+   
 
     string public name = "Cryptara Token";
     string public symbol = "CRYP";
@@ -69,9 +68,9 @@ contract CryptaraLabs {
         return true;
     }
 
-    // =====================================================
+   
     // ----------------- CROWDFUNDING LOGIC -----------------
-    // =====================================================
+   
 
     struct Project {
         uint256 id;
@@ -164,9 +163,8 @@ contract CryptaraLabs {
         emit Refunded(_projectId, msg.sender, contributions[_projectId][msg.sender]);
     }
 
-    // =====================================================
     // ----------------- TOKEN SALE LOGIC -------------------
-    // =====================================================
+   
 
     event TokensPurchased(address indexed buyer, uint256 amount);
 
@@ -215,5 +213,6 @@ contract CryptaraLabs {
     receive() external payable {}
     fallback() external payable {}
 }
+
 
 
